@@ -57,19 +57,6 @@
           </mat-select>
         </mat-form-field>
      </div>
-
-     <div class="gestor">
-      <mat-form-field class="full-width" appearance="outline">
-         <mat-label>GESTOR ({{ chamado.nomeGestor }})</mat-label>
-         <mat-select 
-         [(ngModel)]="chamado.gestor"
-         name="gestor"
-         [formControl]="gestor" 
-         required>
-           <mat-option *ngFor="let gest of gestores" value="{{ gest.id }}">{{ gest.nome }}</mat-option>
-         </mat-select>
-       </mat-form-field>
-    </div>
  
      <div class="cliente">
        <mat-form-field class="full-width" appearance="outline">

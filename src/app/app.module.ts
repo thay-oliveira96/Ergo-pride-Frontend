@@ -45,12 +45,12 @@ import { ClienteListComponent } from './components/cliente/cliente-list/cliente-
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
 import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
-import { GestorListComponent } from './components/gestor/gestor-list/gestor-list.component';
-import { GestorCreateComponent } from './components/gestor/gestor-create/gestor-create.component';
-import { GestorUpdateComponent } from './components/gestor/gestor-update/gestor-update.component';
-import { GestorDeleteComponent } from './components/gestor/gestor-delete/gestor-delete.component';
 import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
 import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
+import { EmpresasCreateComponent } from './components/empresas/empresas-create/empresas-create.component';
+import { EmpresasDeleteComponent } from './components/empresas/empresas-delete/empresas-delete.component';
+import { EmpresasUpdateComponent } from './components/empresas/empresas-update/empresas-update.component';
+import { EmpresasListComponent } from './components/empresas/empresas-list/empresas-list.component';
 
 @NgModule({
   declarations: [
@@ -69,12 +69,12 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
     ClienteUpdateComponent,
     ChamadoCreateComponent,
     ChamadoListComponent,
-    GestorListComponent,
-    GestorCreateComponent,
-    GestorUpdateComponent,
-    GestorDeleteComponent,
     ChamadoUpdateComponent,
-    ChamadoReadComponent
+    ChamadoReadComponent,
+    EmpresasCreateComponent,
+    EmpresasDeleteComponent,
+    EmpresasUpdateComponent,
+    EmpresasListComponent
   ],
   imports: [
     BrowserModule,

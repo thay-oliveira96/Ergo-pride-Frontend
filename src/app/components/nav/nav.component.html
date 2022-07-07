@@ -1,6 +1,6 @@
 <mat-drawer-container class="container" autosize>
     <mat-drawer #drawer class="sidenav" mode="side">
-      <img src="assets/img/Logo_Newton_Sem nome.svg" alt="Imagem de Navegação">
+      <img src="assets/img/ergo-pride.png" alt="Imagem de Navegação">
       <mat-nav-list class="nav-list">
           <a mat-list-item routerLink="home">
               <i class="material-icons">home</i>
@@ -13,16 +13,15 @@
         <a mat-list-item routerLink="clientes">
           <i class="material-icons">person</i>
         Clientes
+        </a>
+        <a mat-list-item routerLink="empresas">
+          <i class="material-icons">villa</i>
+        Empresas
       </a>
-      <a mat-list-item routerLink="gestores">
-        <i class="material-icons">supervisor_account</i>
-      Gestor
-    </a>
       <a mat-list-item routerLink="chamados">
         <i class="material-icons">dvr</i>
       Ordem de Manutenção
     </a>
-    
     <a mat-list-item (click)="logout()">
       <i class="material-icons">logout</i>
     Logout

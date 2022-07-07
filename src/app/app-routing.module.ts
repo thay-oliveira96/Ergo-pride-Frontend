@@ -14,12 +14,12 @@ import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecn
 import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
 import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
 import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
-import { GestorListComponent } from './components/gestor/gestor-list/gestor-list.component';
-import { GestorCreateComponent } from './components/gestor/gestor-create/gestor-create.component';
-import { GestorUpdateComponent } from './components/gestor/gestor-update/gestor-update.component';
-import { GestorDeleteComponent } from './components/gestor/gestor-delete/gestor-delete.component';
 import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
 import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
+import { EmpresasCreateComponent } from './components/empresas/empresas-create/empresas-create.component';
+import { EmpresasListComponent } from './components/empresas/empresas-list/empresas-list.component';
+import { EmpresasUpdateComponent } from './components/empresas/empresas-update/empresas-update.component';
+import { EmpresasDeleteComponent } from './components/empresas/empresas-delete/empresas-delete.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -37,15 +37,15 @@ const routes: Routes = [
       { path: 'clientes/update/:id', component: ClienteUpdateComponent},
       {path: 'clientes/delete/:id', component: ClienteDeleteComponent},
 
-      {path: 'gestores', component: GestorListComponent},
-      {path: 'gestores/create', component: GestorCreateComponent},
-      {path: 'gestores/update/:id', component: GestorUpdateComponent},
-      {path: 'gestores/delete/:id', component: GestorDeleteComponent},
-
       {path: 'chamados', component: ChamadoListComponent},
       {path: 'chamados/create', component: ChamadoCreateComponent},
       {path: 'chamados/update/:id', component: ChamadoUpdateComponent},
       {path: 'chamados/read/:id', component: ChamadoReadComponent},
+
+      {path: 'empresas', component: EmpresasListComponent},
+      {path: 'empresas/create', component: EmpresasCreateComponent},
+      {path: 'empresas/update/:id', component: EmpresasUpdateComponent},
+      {path: 'empresas/delete/:id', component: EmpresasDeleteComponent},
     ]
   }
 ];

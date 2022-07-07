@@ -19,9 +19,7 @@ export class ChamadoReadComponent implements OnInit {
     observacoes: '',
     tecnico:     '',
     cliente:     '',
-    gestor:      '', 
     nomeCliente: '',
-    nomeGestor:  '',
     nomeTecnico: ''
   }
 

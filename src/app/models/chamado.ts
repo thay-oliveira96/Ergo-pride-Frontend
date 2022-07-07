@@ -8,8 +8,6 @@ export interface Chamado {
     observacoes:     string;
     tecnico:            any;
     cliente:            any;
-    gestor:             any;
     nomeCliente:     string;
-    nomeGestor:      string;
     nomeTecnico:     string;
  }

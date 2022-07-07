@@ -6,13 +6,16 @@
    width: 13rem;
    color: white;
    background: rgb(2,0,36);
-   background: linear-gradient(90deg, rgba(112,207,246,1) 100%, rgba(6,156,171,1) 100%, rgba(0,212,255,1) 100%);
+   background: orange;
+  /* background: linear-gradient(90deg, rgba(112,207,246,1) 100%, rgba(6,156,171,1) 100%, rgba(0,212,255,1) 100%); */
 }
 
 img {
-   width: 100%;
+   width: 90%;
    height: 7rem;
+   display: flex;
    margin: .8rem auto 1rem auto;
+   border-radius: 1rem;
 }
 
 .sidenav a {
@@ -25,5 +28,6 @@ img {
 .menu {
    margin: 1rem 0 0 1rem;
    color: white;
-   background: linear-gradient(90deg, rgba(112,207,246,1) 100%, rgba(6,156,171,1) 100%, rgba(0,212,255,1) 100%);
+   /*background: linear-gradient(90deg, rgba(112,207,246,1) 100%, rgba(6,156,171,1) 100%, rgba(0,212,255,1) 100%); */
+   background: orange;
 }
