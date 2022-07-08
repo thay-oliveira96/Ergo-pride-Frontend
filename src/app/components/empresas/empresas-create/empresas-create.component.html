@@ -40,7 +40,7 @@
             matInput 
             placeholder="Ex.. 1234"
             mask="0000-000">
-            <mat-icon matSuffix>cep</mat-icon>
+            <mat-icon matSuffix>home</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullwidth" appearance="legacy">
@@ -52,7 +52,7 @@
             required
             matInput 
             placeholder="Ex.. Rua... av...">
-            <mat-icon matSuffix>cep</mat-icon>
+            <mat-icon matSuffix>room</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullwidth" appearance="legacy">
@@ -65,7 +65,7 @@
             matInput 
             placeholder="Ex.. (00)00000-0000"
             mask="(00)00000-0000">
-            <mat-icon matSuffix>telefone</mat-icon>
+            <mat-icon matSuffix>call</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullwidth" appearance="legacy">
@@ -78,6 +78,10 @@
             matInput 
             placeholder="Ex.. nome@email.com">
             <mat-icon matSuffix>email</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="example-ripple-form-field" appearance="fill">
+            <input matInput [(ngModel)]="empresas.funcionarios" type="number" placeholder="Radius">
           </mat-form-field>
 
 

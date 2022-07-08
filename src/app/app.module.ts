@@ -51,6 +51,7 @@ import { EmpresasCreateComponent } from './components/empresas/empresas-create/e
 import { EmpresasDeleteComponent } from './components/empresas/empresas-delete/empresas-delete.component';
 import { EmpresasUpdateComponent } from './components/empresas/empresas-update/empresas-update.component';
 import { EmpresasListComponent } from './components/empresas/empresas-list/empresas-list.component';
+import { EmpresasReadComponent } from './components/empresas/empresas-read/empresas-read.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { EmpresasListComponent } from './components/empresas/empresas-list/empre
     EmpresasCreateComponent,
     EmpresasDeleteComponent,
     EmpresasUpdateComponent,
-    EmpresasListComponent
+    EmpresasListComponent,
+    EmpresasReadComponent
   ],
   imports: [
     BrowserModule,

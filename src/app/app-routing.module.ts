@@ -20,6 +20,7 @@ import { EmpresasCreateComponent } from './components/empresas/empresas-create/e
 import { EmpresasListComponent } from './components/empresas/empresas-list/empresas-list.component';
 import { EmpresasUpdateComponent } from './components/empresas/empresas-update/empresas-update.component';
 import { EmpresasDeleteComponent } from './components/empresas/empresas-delete/empresas-delete.component';
+import { EmpresasReadComponent } from './components/empresas/empresas-read/empresas-read.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -46,6 +47,7 @@ const routes: Routes = [
       {path: 'empresas/create', component: EmpresasCreateComponent},
       {path: 'empresas/update/:id', component: EmpresasUpdateComponent},
       {path: 'empresas/delete/:id', component: EmpresasDeleteComponent},
+      {path: 'empresas/read/:id', component: EmpresasReadComponent},
     ]
   }
 ];

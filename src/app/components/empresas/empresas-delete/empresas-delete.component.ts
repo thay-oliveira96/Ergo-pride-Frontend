@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Empresas } from 'src/app/models/empresas';
+import { FormControl, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { EmpresaService } from 'src/app/services/empresas';
+
+
 
 @Component({
   selector: 'app-empresas-delete',
@@ -7,9 +14,49 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmpresasDeleteComponent implements OnInit {
 
-  constructor() { }
+  empresas: Empresas = {
+    id:         '',
+    nome:       '',
+    cnpj:        '',
+    cep:      '',
+    endereco:      '',
+    telefone:     '',
+    email: '',
+    funcionarios: '',
+    departamentos: '',
+  }
+
+  constructor(
+    private service: EmpresaService,
+    private toast:    ToastrService,
+    private router:          Router,
+    private route:   ActivatedRoute,
+    ) { }
 
   ngOnInit(): void {
+    this.empresas.id = this.route.snapshot.paramMap.get('id');
+    this.findById();
+   }
+
+  findById(): void {
+    this.service.findById(this.empresas.id).subscribe(resposta => {
+      this.empresas = resposta;
+    })
+  }
+
+  delete(): void {
+    this.service.delete(this.empresas.id).subscribe(() => {
+      this.toast.success('Empresa Deletada com sucesso', 'Delete');
+      this.router.navigate(['empresas'])
+    }, ex => {
+      if(ex.error.errors) {
+        ex.error.errors.forEach(element => {
+          this.toast.error(element.message);
+        });
+      } else {
+        this.toast.error(ex.error.message);
+      }
+    })
   }
 
 }

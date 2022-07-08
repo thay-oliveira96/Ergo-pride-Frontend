@@ -21,8 +21,15 @@ table {
   }
 .edit {
     color: rgb(0, 225, 255);
+    margin: 1rem;
 }
 
 .delete {
     color: red;
+    margin: 1rem;
+}
+
+.read {
+    color: green;
+    margin: 1rem;
 }
