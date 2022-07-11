@@ -52,6 +52,10 @@ import { EmpresasDeleteComponent } from './components/empresas/empresas-delete/e
 import { EmpresasUpdateComponent } from './components/empresas/empresas-update/empresas-update.component';
 import { EmpresasListComponent } from './components/empresas/empresas-list/empresas-list.component';
 import { EmpresasReadComponent } from './components/empresas/empresas-read/empresas-read.component';
+import { DepartamentosListComponent } from './components/departamentos/departamentos-list/departamentos-list.component';
+import { DepartamentosCreateComponent } from './components/departamentos/departamentos-create/departamentos-create.component';
+import { DepartamentosUpdateComponent } from './components/departamentos/departamentos-update/departamentos-update.component';
+import { DepartamentosDeleteComponent } from './components/departamentos/departamentos-delete/departamentos-delete.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +80,11 @@ import { EmpresasReadComponent } from './components/empresas/empresas-read/empre
     EmpresasDeleteComponent,
     EmpresasUpdateComponent,
     EmpresasListComponent,
-    EmpresasReadComponent
+    EmpresasReadComponent,
+    DepartamentosListComponent,
+    DepartamentosCreateComponent,
+    DepartamentosUpdateComponent,
+    DepartamentosDeleteComponent
   ],
   imports: [
     BrowserModule,

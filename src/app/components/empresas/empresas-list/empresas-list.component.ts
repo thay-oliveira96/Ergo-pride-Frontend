@@ -14,7 +14,7 @@ export class EmpresasListComponent implements OnInit {
 
   ELEMENT_DATA: Empresas[] = []
   
-  displayedColumns: string[] = ['id', 'nome', 'cnpj', 'cep', 'telefone','email', 'funcionarios', 'acoes'];
+  displayedColumns: string[] = ['id', 'nome', 'cnpj', 'telefone','email', 'acoes'];
   dataSource = new MatTableDataSource<Empresas>(this.ELEMENT_DATA);
   
   @ViewChild(MatPaginator) paginator: MatPaginator;
