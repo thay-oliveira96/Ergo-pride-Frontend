@@ -100,6 +100,19 @@
              placeholder="Ex... 1,2,3">
           </mat-form-field>
 
+          <div class="departamentos">
+            <mat-form-field class="full-width" appearance="outline">
+               <mat-label>Selecione os departamentos</mat-label>
+               <mat-select 
+               [(ngModel)]="empresas.departamentos"
+               name="departamentos"
+               [formControl]="departamentos" 
+               required>
+                 <mat-option *ngFor="let dep of departamento" value="{{ dep.id }}">{{ dep.nome }}</mat-option>
+               </mat-select>
+             </mat-form-field>
+          </div>
+
           <mat-form-field class="fullwidth" appearance="legacy">
             <mat-label>Observações</mat-label>
             <textarea

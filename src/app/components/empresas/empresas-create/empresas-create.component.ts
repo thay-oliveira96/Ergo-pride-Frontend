@@ -4,6 +4,8 @@ import { Empresas } from 'src/app/models/empresas';
 import { EmpresaService } from 'src/app/services/empresas';
 import { Router } from '@angular/router';
 import { FormControl, Validators } from '@angular/forms';
+import { Departamentos } from 'src/app/models/departamentos';
+import { DepartamentoService } from 'src/app/services/departamentos';
 
 @Component({
   selector: 'app-empresas-create',
@@ -26,6 +28,8 @@ export class EmpresasCreateComponent implements OnInit {
     observacoes: ''
   }
 
+  departamento: Departamentos[] = []
+
   nome: FormControl = new FormControl(null, Validators.minLength(3));
   cnpj: FormControl = new FormControl(null, Validators.required);
   cep: FormControl = new FormControl(null, Validators.required);
@@ -39,10 +43,12 @@ export class EmpresasCreateComponent implements OnInit {
 
   constructor(
     private service: EmpresaService,
+    private departamentoService: DepartamentoService,
     private toast: ToastrService,
     private router: Router) { }
 
   ngOnInit(): void {
+    this.findAllDepartamentos();
   }
 
   
@@ -59,6 +65,12 @@ export class EmpresasCreateComponent implements OnInit {
       } else {
         this.toast.error(ex.error.message);
       }
+    })
+  }
+
+  findAllDepartamentos(): void {
+    this.departamentoService.findAll().subscribe(resposta => {
+      this.departamento = resposta;
     })
   }
 

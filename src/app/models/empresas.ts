@@ -8,6 +8,6 @@ export interface Empresas {
     celular: String;
     email: String;
     funcionarios: string;
-    departamentos: string;
+    departamentos: any;
     observacoes: String;
 }
