@@ -19,9 +19,11 @@ export class EmpresasCreateComponent implements OnInit {
     cep:      '',
     endereco:      '',
     telefone:     '',
+    celular: '',
     email: '',
     funcionarios: '',
-    departamentos: ''
+    departamentos: '',
+    observacoes: ''
   }
 
   nome: FormControl = new FormControl(null, Validators.minLength(3));
@@ -29,9 +31,11 @@ export class EmpresasCreateComponent implements OnInit {
   cep: FormControl = new FormControl(null, Validators.required);
   endereco: FormControl = new FormControl(null, Validators.required);
   telefone: FormControl = new FormControl(null, Validators.required);
+  celular: FormControl = new FormControl(null, Validators.required);
   email: FormControl = new FormControl(null, Validators.required);
   funcionarios: FormControl = new FormControl(null, Validators.required);
   departamentos: FormControl = new FormControl(null, Validators.required);
+  observacoes: FormControl = new FormControl(null, Validators.required);
 
   constructor(
     private service: EmpresaService,

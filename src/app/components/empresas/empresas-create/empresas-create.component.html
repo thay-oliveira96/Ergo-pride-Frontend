@@ -69,6 +69,19 @@
           </mat-form-field>
 
           <mat-form-field class="fullwidth" appearance="legacy">
+            <mat-label>celular</mat-label>
+            <input
+            [(ngModel)]="empresas.celular"
+            name="celular"
+            [formControl]="celular"
+            required
+            matInput 
+            placeholder="Ex.. (00)90000-0000"
+            mask="(00)90000-0000">
+            <mat-icon matSuffix>call</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="fullwidth" appearance="legacy">
             <mat-label>E-mail</mat-label>
             <input 
             [(ngModel)]="empresas.email"
@@ -80,8 +93,23 @@
             <mat-icon matSuffix>email</mat-icon>
           </mat-form-field>
 
-          <mat-form-field class="example-ripple-form-field" appearance="fill">
-            <input matInput [(ngModel)]="empresas.funcionarios" type="number" placeholder="Radius">
+          <mat-form-field class="fullwidth" appearance="legacy">
+            <mat-label>Quantidade de Funcionarios</mat-label>
+            <input matInput [(ngModel)]="empresas.funcionarios"
+             type="number"
+             placeholder="Ex... 1,2,3">
+          </mat-form-field>
+
+          <mat-form-field class="fullwidth" appearance="legacy">
+            <mat-label>Observações</mat-label>
+            <textarea
+            [(ngModel)]="empresas.observacoes"
+            name="observacoes"
+            [formControl]="observacoes" 
+             matInput
+             placeholder="Ex. Alguma anotação relevante do cliente...">
+            </textarea>
+            <mat-icon matSuffix>edit_note</mat-icon>
           </mat-form-field>
 
 

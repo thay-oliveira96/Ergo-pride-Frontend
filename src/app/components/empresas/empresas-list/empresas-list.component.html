@@ -1,6 +1,7 @@
 <div class="container">
     <h1>Listando Clientes</h1>
-    <button routerLink="create" class="mat-elevation-z8" mat-raised-button color="">Nova Empresa</button>
+    <button routerLink="create" class="mat-elevation-z8" mat-raised-button color="">
+      <i class="material-icons add">add_circle</i>Nova Empresa</button>
   
     <!--FILTRO PARA PESQUISA-->
     <mat-form-field appearance="standard">
@@ -53,18 +54,6 @@
               <th mat-header-cell *matHeaderCellDef> Email </th>
               <td mat-cell *matCellDef="let element"> {{element.email}} </td>
             </ng-container>
-
-               <!-- Symbol Column -->
-               <ng-container matColumnDef="funcionarios">
-                <th mat-header-cell *matHeaderCellDef> Funcionarios </th>
-                <td mat-cell *matCellDef="let element"> {{element.funcionarios}} </td>
-              </ng-container>
-
-              <!-- Symbol Column -->
-              <ng-container matColumnDef="departamentos">
-                <th mat-header-cell *matHeaderCellDef> Departamento </th>
-                <td mat-cell *matCellDef="let element"> {{element.departamentos}} </td>
-              </ng-container>
             
             <ng-container matColumnDef="acoes">
               <th class="acoes" mat-header-cell *matHeaderCellDef>Ações</th>

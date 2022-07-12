@@ -1,104 +1,116 @@
 <div class="container mat-elevation-z8">
-    <h1 class="full-width">Cadastro da Empresa</h1>
- 
-    <form class="form">
-       <mat-form-field class="full-width" appearance="outline">
-         <mat-label>Nome</mat-label>
-         <input 
-         [disabled]="true"
-         [(ngModel)]="empresas.nome"
-         name="nome"
-         matInput 
-         placeholder="Ex. nome da empresa">
-       </mat-form-field>
-     </form>
+  <h1 class="full-width">Cadastro da Empresa</h1>
 
-     <form class="form">
-      <mat-form-field class="full-width" appearance="outline">
-        <mat-label>CNPJ</mat-label>
-        <input 
-        [disabled]="true"
-        [(ngModel)]="empresas.cnpj"
-        name="cnpj"
-        matInput 
-        placeholder="Ex. 00.000.000/0000-00">
-      </mat-form-field>
-    </form>
+  <form class="form">
+     <mat-form-field class="full-width" appearance="outline">
+       <mat-label>Nome</mat-label>
+       <input 
+       [disabled]="true"
+       [(ngModel)]="empresas.nome"
+       name="nome"
+       matInput 
+       placeholder="Ex. nome da empresa">
+     </mat-form-field>
+   </form>
 
-    <form class="form">
-      <mat-form-field class="full-width" appearance="outline">
-        <mat-label>CEP</mat-label>
-        <input 
-        [disabled]="true"
-        [(ngModel)]="empresas.cep"
-        name="cep"
-        matInput 
-        placeholder="Ex. 0000-000">
-      </mat-form-field>
-    </form>
+   <form class="form">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>CNPJ</mat-label>
+      <input 
+      [disabled]="true"
+      [(ngModel)]="empresas.cnpj"
+      name="cnpj"
+      matInput 
+      placeholder="Ex. 00.000.000/0000-00">
+    </mat-form-field>
+  </form>
 
-    <form class="form">
-      <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Endereco</mat-label>
-        <input 
-        [disabled]="true"
-        [(ngModel)]="empresas.endereco"
-        name="endereco"
-        matInput 
-        placeholder="Ex. Rua... Av...">
-      </mat-form-field>
-    </form>
+  <form class="form">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>CEP</mat-label>
+      <input 
+      [disabled]="true"
+      [(ngModel)]="empresas.cep"
+      name="cep"
+      matInput 
+      placeholder="Ex. 0000-000">
+    </mat-form-field>
+  </form>
 
-    <form class="form">
-      <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Telefone</mat-label>
-        <input 
-        [disabled]="true"
-        [(ngModel)]="empresas.telefone"
-        name="telefone"
-        matInput 
-        placeholder="Ex. (00)00000-0000">
-      </mat-form-field>
-    </form>
+  <form class="form">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Endereco</mat-label>
+      <input 
+      [disabled]="true"
+      [(ngModel)]="empresas.endereco"
+      name="endereco"
+      matInput 
+      placeholder="Ex. Rua... Av...">
+    </mat-form-field>
+  </form>
 
-    <form class="form">
-      <mat-form-field class="full-width" appearance="outline">
-        <mat-label>E-mail</mat-label>
-        <input 
-        [disabled]="true"
-        [(ngModel)]="empresas.email"
-        name="email"
-        matInput 
-        placeholder="Ex. empresa@mail.com">
-      </mat-form-field>
-    </form>
+  <form class="form">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Telefone</mat-label>
+      <input 
+      [disabled]="true"
+      [(ngModel)]="empresas.telefone"
+      name="telefone"
+      matInput 
+      placeholder="Ex. (00)00000-0000">
+    </mat-form-field>
+  </form>
 
-    <form class="form">
-      <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Funcionarios</mat-label>
-        <input 
-        [disabled]="true"
-        [(ngModel)]="empresas.funcionarios"
-        name="funcionarios"
-        matInput 
-        placeholder="Ex. 1, 2, 3, 4">
-      </mat-form-field>
-    </form>
+  <form class="form">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Celular</mat-label>
+      <input 
+      [disabled]="true"
+      [(ngModel)]="empresas.celular"
+      name="celular"
+      matInput 
+      placeholder="Ex. (00)00000-0000">
+    </mat-form-field>
+  </form>
 
-    <form class="form">
-      <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Departamentos</mat-label>
-        <input 
-        [disabled]="true"
-        [(ngModel)]="empresas.funcionarios"
-        name="funcionarios"
-        matInput 
-        placeholder="Ex. empresa@mail.com">
-      </mat-form-field>
-    </form>
- 
- 
-     <button routerLink="../../" class="full-width mat-elevation-z4" mat-stroked-button color="warn">Retornar</button>
- 
-     <p class="full-width">Desnvolvido por Thaynan</p>
- </div>
+  <form class="form">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>E-mail</mat-label>
+      <input 
+      [disabled]="true"
+      [(ngModel)]="empresas.email"
+      name="email"
+      matInput 
+      placeholder="Ex. empresa@mail.com">
+    </mat-form-field>
+  </form>
+
+  <form class="form">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Funcionarios</mat-label>
+      <input 
+      [disabled]="true"
+      [(ngModel)]="empresas.funcionarios"
+      name="funcionarios"
+      matInput 
+      placeholder="Ex. 1, 2, 3, 4">
+    </mat-form-field>
+  </form>
+
+  <form class="form">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Departamentos</mat-label>
+      <input 
+      [disabled]="true"
+      [(ngModel)]="empresas.funcionarios"
+      name="funcionarios"
+      matInput 
+      placeholder="Ex. empresa@mail.com">
+    </mat-form-field>
+  </form>
+
+
+   <button routerLink="../../" class="full-width mat-elevation-z4" mat-stroked-button color="warn">Retornar</button>
+
+   <p class="full-width">Desnvolvido por Thaynan</p>
+</div>

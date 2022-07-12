@@ -21,9 +21,11 @@ export class EmpresasDeleteComponent implements OnInit {
     cep:      '',
     endereco:      '',
     telefone:     '',
+    celular: '',
     email: '',
     funcionarios: '',
     departamentos: '',
+    observacoes: ''
   }
 
   constructor(

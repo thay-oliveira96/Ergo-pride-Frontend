@@ -13,6 +13,8 @@ table {
 
   button {
       width: 100%;
+      background: rgb(19, 174, 19);
+      color: white;
   }
   h1 {
     width: 100%;
@@ -30,6 +32,11 @@ table {
 }
 
 .read {
-    color: green;
+    color: rgb(16, 107, 253);
     margin: 1rem;
+}
+
+.add {
+    color: white;
+    margin: auto 0.2rem;
 }

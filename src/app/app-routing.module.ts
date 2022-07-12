@@ -21,6 +21,10 @@ import { EmpresasListComponent } from './components/empresas/empresas-list/empre
 import { EmpresasUpdateComponent } from './components/empresas/empresas-update/empresas-update.component';
 import { EmpresasDeleteComponent } from './components/empresas/empresas-delete/empresas-delete.component';
 import { EmpresasReadComponent } from './components/empresas/empresas-read/empresas-read.component';
+import { DepartamentosListComponent } from './components/departamentos/departamentos-list/departamentos-list.component';
+import { DepartamentosCreateComponent } from './components/departamentos/departamentos-create/departamentos-create.component';
+import { DepartamentosUpdateComponent } from './components/departamentos/departamentos-update/departamentos-update.component';
+import { DepartamentosDeleteComponent } from './components/departamentos/departamentos-delete/departamentos-delete.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -48,6 +52,11 @@ const routes: Routes = [
       {path: 'empresas/update/:id', component: EmpresasUpdateComponent},
       {path: 'empresas/delete/:id', component: EmpresasDeleteComponent},
       {path: 'empresas/read/:id', component: EmpresasReadComponent},
+
+      {path: 'departamentos', component: DepartamentosListComponent},
+      {path: 'departamentos/create', component: DepartamentosCreateComponent},
+      {path: 'departamentos/update/:id', component: DepartamentosUpdateComponent},
+      {path: 'departamentos/delete/:id', component: DepartamentosDeleteComponent},
     ]
   }
 ];

@@ -18,9 +18,11 @@ export class EmpresasReadComponent implements OnInit {
     cep:      '',
     endereco: '',
     telefone:     '',
+    celular: '',
     email:     '',
     funcionarios: '',
-    departamentos: ''
+    departamentos: '',
+    observacoes: ''
   }
 
   constructor(

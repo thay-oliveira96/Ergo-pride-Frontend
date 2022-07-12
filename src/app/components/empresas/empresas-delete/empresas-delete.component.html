@@ -53,6 +53,16 @@
             matInput>
             <mat-icon matSuffix>call</mat-icon>
           </mat-form-field>
+
+          <mat-form-field class="fullwidth" appearance="legacy">
+            <mat-label>Celular</mat-label>
+            <input 
+            [(ngModel)]="empresas.celular"
+            name="celular"
+            [disabled]="true"
+            matInput>
+            <mat-icon matSuffix>call</mat-icon>
+          </mat-form-field>
   
           <mat-form-field class="fullwidth" appearance="legacy">
             <mat-label>E-mail</mat-label>
@@ -82,6 +92,18 @@
             [disabled]="true"
             matInput>
             <mat-icon matSuffix>Departamentos</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="fullwidth" appearance="legacy">
+            <mat-label>Observações</mat-label>
+            <textarea
+            [(ngModel)]="empresas.observacoes"
+            name="observacoes"
+            
+            [disabled]="true"
+             matInput>
+            </textarea>
+            <mat-icon matSuffix>edit_note</mat-icon>
           </mat-form-field>
   
         
