@@ -57,6 +57,8 @@ import { DepartamentosCreateComponent } from './components/departamentos/departa
 import { DepartamentosUpdateComponent } from './components/departamentos/departamentos-update/departamentos-update.component';
 import { DepartamentosDeleteComponent } from './components/departamentos/departamentos-delete/departamentos-delete.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

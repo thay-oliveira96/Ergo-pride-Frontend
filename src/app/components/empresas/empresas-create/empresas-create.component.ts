@@ -24,10 +24,11 @@ export class EmpresasCreateComponent implements OnInit {
     celular: '',
     email: '',
     funcionarios: '',
-    departamentos: '',
+    departamentos: [],
     observacoes: ''
   }
 
+  
   departamento: Departamentos[] = []
 
   nome: FormControl = new FormControl(null, Validators.minLength(3));
@@ -50,7 +51,6 @@ export class EmpresasCreateComponent implements OnInit {
   ngOnInit(): void {
     this.findAllDepartamentos();
   }
-
   
   create(): void {
     this.service.create(this.empresas).subscribe(() => {
@@ -68,7 +68,7 @@ export class EmpresasCreateComponent implements OnInit {
     })
   }
 
-  findAllDepartamentos(): void {
+  findAllDepartamentos(): void { 
     this.departamentoService.findAll().subscribe(resposta => {
       this.departamento = resposta;
     })

@@ -78,7 +78,7 @@
             matInput 
             placeholder="Ex.. (00)90000-0000"
             mask="(00)90000-0000">
-            <mat-icon matSuffix>call</mat-icon>
+            <mat-icon matSuffix>smartphone</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullwidth" appearance="legacy">
@@ -100,18 +100,20 @@
              placeholder="Ex... 1,2,3">
           </mat-form-field>
 
-          <div class="departamentos">
-            <mat-form-field class="full-width" appearance="outline">
-               <mat-label>Selecione os departamentos</mat-label>
-               <mat-select 
-               [(ngModel)]="empresas.departamentos"
-               name="departamentos"
-               [formControl]="departamentos" 
-               required>
-                 <mat-option *ngFor="let dep of departamento" value="{{ dep.id }}">{{ dep.nome }}</mat-option>
-               </mat-select>
-             </mat-form-field>
-          </div>
+
+        <div>
+          <mat-form-field class="fullwidth" appearance="legacy">
+            <mat-label>Departamentos</mat-label>
+            <mat-select 
+              ng-model="empresas.departamentos"
+              name="departamentos" 
+              multiple>
+              <mat-option *ngFor="let dep of departamento" value="{{ dep.id }}">{{ dep.nome }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          
+        </div>
+
 
           <mat-form-field class="fullwidth" appearance="legacy">
             <mat-label>Observações</mat-label>
