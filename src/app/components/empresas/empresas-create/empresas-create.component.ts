@@ -3,7 +3,7 @@ import { ToastrService } from 'ngx-toastr';
 import { Empresas } from 'src/app/models/empresas';
 import { EmpresaService } from 'src/app/services/empresas';
 import { Router } from '@angular/router';
-import { FormControl, Validators } from '@angular/forms';
+import { FormArray, FormControl, Validators } from '@angular/forms';
 import { Departamentos } from 'src/app/models/departamentos';
 import { DepartamentoService } from 'src/app/services/departamentos';
 
@@ -24,12 +24,12 @@ export class EmpresasCreateComponent implements OnInit {
     celular: '',
     email: '',
     funcionarios: '',
-    departamentos: [],
+    departamentos: [ ],
     observacoes: ''
   }
 
   
-  departamento: Departamentos[] = []
+  departamento: Departamentos[] = [];
 
   nome: FormControl = new FormControl(null, Validators.minLength(3));
   cnpj: FormControl = new FormControl(null, Validators.required);
@@ -67,15 +67,25 @@ export class EmpresasCreateComponent implements OnInit {
       }
     })
   }
-
   findAllDepartamentos(): void { 
     this.departamentoService.findAll().subscribe(resposta => {
       this.departamento = resposta;
     })
   }
 
+  //metodo para recuperar Arrays 
+  //buildDepartmentos() {
+    //  const values = this.departamento.map(v => new FormControl(false));
+      //return this.empresas.array(values);
+  //}
+
+  //teste
+  addDepartamentos(){
+    return this.departamento.push();
+  }
+
   validaCampos(): boolean {
-    return this.nome.valid && this.cnpj.valid && this.email.valid
+    return this.nome.valid && this.cnpj.valid && this.email.valid 
   }
   
 }

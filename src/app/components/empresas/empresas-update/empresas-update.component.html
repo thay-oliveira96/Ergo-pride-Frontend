@@ -94,7 +94,7 @@
           </mat-form-field>
 
           <mat-form-field class="fullwidth" appearance="legacy">
-            <mat-label>Funcionarios</mat-label>
+            <mat-label>Funcionarios({{ empresas.funcionarios }})</mat-label>
             <input 
             [(ngModel)]="empresas.funcionarios"
             name="funcionarios"
@@ -104,6 +104,18 @@
             placeholder="Ex.. 1, 2, 3, 4">
             <mat-icon matSuffix>funcionarios</mat-icon>
           </mat-form-field>
+
+          <div>
+            <mat-form-field class="fullwidth" appearance="legacy">
+              <mat-label>Departamentos ({{ empresas.departamentos }})</mat-label>
+              <mat-select 
+                ng-model="empresas.departamentos"
+                name="departamentos" 
+                multiple>
+                <mat-option *ngFor="let dep of departamento" value="{{ dep.id }}">{{ dep.nome }}</mat-option>
+              </mat-select>
+            </mat-form-field>    
+          </div>
 
           <mat-form-field class="fullwidth" appearance="legacy">
             <mat-label>Observações</mat-label>

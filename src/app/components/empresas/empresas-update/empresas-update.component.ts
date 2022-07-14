@@ -4,6 +4,8 @@ import { FormControl, Validators } from '@angular/forms';
 import { EmpresaService } from 'src/app/services/empresas';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Departamentos } from 'src/app/models/departamentos';
+import { DepartamentoService } from 'src/app/services/departamentos';
 
 @Component({
   selector: 'app-empresas-update',
@@ -22,9 +24,11 @@ export class EmpresasUpdateComponent implements OnInit {
     celular: '',
     email: '',
     funcionarios: '',
-    departamentos: '',
+    departamentos: [],
     observacoes: ''
   }
+
+  departamento: Departamentos[] = []
 
   nome: FormControl =  new FormControl(null, Validators.minLength(3));
   cnpj: FormControl =       new FormControl(null, Validators.required);
@@ -39,6 +43,7 @@ export class EmpresasUpdateComponent implements OnInit {
 
   constructor(
     private service: EmpresaService,
+    private departamentoService: DepartamentoService,
     private toast:    ToastrService,
     private router:          Router,
     private route:   ActivatedRoute,
@@ -47,7 +52,14 @@ export class EmpresasUpdateComponent implements OnInit {
   ngOnInit(): void {
     this.empresas.id = this.route.snapshot.paramMap.get('id');
     this.findById();
+    this.findAllDepartamentos();
    }
+
+   findAllDepartamentos(): void { 
+    this.departamentoService.findAll().subscribe(resposta => {
+      this.departamento = resposta;
+    })
+  }
 
   findById(): void {
     this.service.findById(this.empresas.id).subscribe(resposta => {

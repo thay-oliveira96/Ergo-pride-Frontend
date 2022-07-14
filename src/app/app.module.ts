@@ -112,6 +112,8 @@ import { DepartamentosDeleteComponent } from './components/departamentos/departa
     MatTableModule,
     MatIconModule,
     MatListModule,
+    MatSelectModule,
+    FormsModule,
     MatCardModule,
     ToastrModule.forRoot({
       timeOut: 4000,
