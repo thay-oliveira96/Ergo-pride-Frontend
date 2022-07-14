@@ -21,7 +21,7 @@ export class EmpresasReadComponent implements OnInit {
     celular: '',
     email:     '',
     funcionarios: '',
-    departamentos: '',
+    departamentos: [],
     observacoes: ''
   }
 

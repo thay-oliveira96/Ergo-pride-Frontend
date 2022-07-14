@@ -56,6 +56,7 @@ import { DepartamentosListComponent } from './components/departamentos/departame
 import { DepartamentosCreateComponent } from './components/departamentos/departamentos-create/departamentos-create.component';
 import { DepartamentosUpdateComponent } from './components/departamentos/departamentos-update/departamentos-update.component';
 import { DepartamentosDeleteComponent } from './components/departamentos/departamentos-delete/departamentos-delete.component';
+import { FuncoesListComponent } from './components/funcoes/funcoes-list/funcoes-list.component';
 
 
 
@@ -86,7 +87,8 @@ import { DepartamentosDeleteComponent } from './components/departamentos/departa
     DepartamentosListComponent,
     DepartamentosCreateComponent,
     DepartamentosUpdateComponent,
-    DepartamentosDeleteComponent
+    DepartamentosDeleteComponent,
+    FuncoesListComponent
   ],
   imports: [
     BrowserModule,

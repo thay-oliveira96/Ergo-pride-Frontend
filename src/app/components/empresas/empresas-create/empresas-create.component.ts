@@ -69,7 +69,7 @@ export class EmpresasCreateComponent implements OnInit {
   }
   findAllDepartamentos(): void { 
     this.departamentoService.findAll().subscribe(resposta => {
-      this.departamento = resposta;
+     this.departamento = resposta;
     })
   }
 
@@ -80,9 +80,9 @@ export class EmpresasCreateComponent implements OnInit {
   //}
 
   //teste
-  addDepartamentos(){
+  /*addDepartamentos(){
     return this.departamento.push();
-  }
+  }*/
 
   validaCampos(): boolean {
     return this.nome.valid && this.cnpj.valid && this.email.valid 
