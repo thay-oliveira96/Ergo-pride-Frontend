@@ -109,12 +109,16 @@
             <mat-form-field class="fullwidth" appearance="legacy">
               <mat-label>Departamentos ({{ empresas.departamentos }})</mat-label>
               <mat-select 
-                ng-model="empresas.departamentos"
+                [(ngModel)]="empresas.departamentos"
                 name="departamentos" 
                 multiple>
                 <mat-option *ngFor="let dep of departamento" value="{{ dep.id }}">{{ dep.nome }}</mat-option>
               </mat-select>
             </mat-form-field>    
+          </div>
+
+          <div>
+            <p> Departamentos ({{empresas.departamentos}}) </p>
           </div>
 
           <mat-form-field class="fullwidth" appearance="legacy">

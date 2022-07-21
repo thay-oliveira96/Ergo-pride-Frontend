@@ -12,17 +12,22 @@ import { EmpresaService } from 'src/app/services/empresas';
 export class EmpresasReadComponent implements OnInit {
 
   empresas: Empresas = {
-
-    nome:  '',
-    cnpj:      '',
-    cep:      '',
-    endereco: '',
-    telefone:     '',
-    celular: '',
-    email:     '',
-    funcionarios: '',
-    departamentos: [],
-    observacoes: ''
+    id:                   '',
+    nome:                 '',
+    cnpj:                 '',
+    cnae:                 '',
+    cep:                  '',
+    endereco:             '',
+    numero:               '',
+    municipio:            '',
+    estado:               '',
+    telefone:             '',
+    celular:              '',
+    email:                '',
+    funcionarios:         '',
+    departamentos:        [ ],
+    atividadePrincipal:   '',
+    observacoes:          ''
   }
 
   constructor(

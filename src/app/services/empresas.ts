@@ -20,8 +20,19 @@ export class EmpresaService {
   }
 
   create(empresas: Empresas): Observable<Empresas> {
+    this.getDepartamentosId(empresas);
     return this.http.post<Empresas>(`${API_CONFIG.baseUrl}/empresas`, empresas);
 
+  }
+
+  getDepartamentosId(empresas: Empresas): any{
+    var arr = [];
+    empresas.departamentos.map((i) => {
+      arr.push({id: Number(i)}) 
+    })
+
+    empresas.departamentos = arr;
+    return empresas;
   }
 
   update(empresas: Empresas): Observable<Empresas> {
