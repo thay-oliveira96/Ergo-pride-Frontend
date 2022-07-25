@@ -30,6 +30,19 @@
           </mat-form-field>
 
           <mat-form-field class="fullwidth" appearance="legacy">
+            <mat-label>CNAE</mat-label>
+            <input
+            [(ngModel)]="empresas.cnae"
+            name="cnae"
+            [formControl]="cnae"
+            required
+            matInput 
+            placeholder="Ex.. 0000-0/00" 
+            mask="0000-0/00">
+            <mat-icon matSuffix>fact_check</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="fullwidth" appearance="legacy">
             <mat-label>CEP</mat-label>
             <input 
             [(ngModel)]="empresas.cep"
@@ -53,6 +66,70 @@
             placeholder="Ex.. Rua... Av...">
             <mat-icon matSuffix>room</mat-icon>
           </mat-form-field>
+
+          <mat-form-field class="fullwidth" appearance="legacy">
+            <mat-label>Numero</mat-label>
+            <input
+            [(ngModel)]="empresas.numero"
+            name="numero"
+            [formControl]="numero"
+            required
+            matInput 
+            type="number"
+            placeholder="Ex.. 1234">
+            <mat-icon matSuffix>pin_drop</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="fullwidth" appearance="legacy">
+            <mat-label>Municipio</mat-label>
+            <input
+            [(ngModel)]="empresas.municipio"
+            name="municipio"
+            [formControl]="municipio"
+            required
+            matInput 
+            placeholder="Ex.. São Paulo, Belo Horizonte...">
+            <mat-icon matSuffix>location_city</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="fullwidth" appearance="legacy">
+              <mat-label>Estado</mat-label>
+                <mat-select
+                [(ngModel)]="empresas.estado"
+                name="estado"
+                [formControl]="estado"
+                matInput 
+                >
+                <mat-option value="ac">Acre (AC)</mat-option>   
+                <mat-option value="al">Alagoas (AL)</mat-option>   
+                <mat-option value="am">Amazonas (AM)</mat-option>   
+                <mat-option value="ap">Amapa (AP)</mat-option>   
+                <mat-option value="ba">Bahia (BA)</mat-option>   
+                <mat-option value="ce">Ceara (CE)</mat-option>   
+                <mat-option value="df">Distrito Federal (DF)</mat-option>   
+                <mat-option value="es">Espirito Santo (ES)</mat-option>   
+                <mat-option value="go">Goiáis (GO)</mat-option>   
+                <mat-option value="ma">Maranhão (MA)</mat-option>   
+                <mat-option value="mt">Mato Grosso (MT)</mat-option>   
+                <mat-option value="ms">Mato Grosso do Sul (MS)</mat-option>   
+                <mat-option value="mg">Minas Gerais (MG)</mat-option>   
+                <mat-option value="pa">Pará (PA)</mat-option>   
+                <mat-option value="pb">Paraiba (PB)</mat-option>   
+                <mat-option value="pr">Paraná (PR)</mat-option>   
+                <mat-option value="pe">Pernanbuco (PE)</mat-option>   
+                <mat-option value="pi">Piaui (PI)</mat-option>   
+                <mat-option value="rj">Rio de Janeiro (RJ)</mat-option>   
+                <mat-option value="rn">Rio Grande do Norte (RN)</mat-option>   
+                <mat-option value="ro">Rondônia (RO)</mat-option>   
+                <mat-option value="rs">Rio Grande do Sul (RS)</mat-option>   
+                <mat-option value="rr">Raraima (RR)</mat-option>   
+                <mat-option value="sc">Santa Catarina (SC)</mat-option>   
+                <mat-option value="se">Sergipe (SE)</mat-option>   
+                <mat-option value="sp">São Paulo (SP)</mat-option>   
+                <mat-option value="to">Tocantins (TO)</mat-option>    
+                </mat-select>
+              </mat-form-field>
+
 
           <mat-form-field class="fullwidth" appearance="legacy">
             <mat-label>Telefone</mat-label>

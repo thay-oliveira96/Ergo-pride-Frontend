@@ -60,6 +60,7 @@ import { FuncoesListComponent } from './components/funcoes/funcoes-list/funcoes-
 import { FuncoesCreateComponent } from './components/funcoes/funcoes-create/funcoes-create.component';
 import { FuncoesUpdateComponent } from './components/funcoes/funcoes-update/funcoes-update.component';
 import { FuncoesDeleteComponent } from './components/funcoes/funcoes-delete/funcoes-delete.component';
+import { AetListComponent } from './components/aet/aet-list/aet-list.component';
 
 
 
@@ -94,7 +95,8 @@ import { FuncoesDeleteComponent } from './components/funcoes/funcoes-delete/func
     FuncoesListComponent,
     FuncoesCreateComponent,
     FuncoesUpdateComponent,
-    FuncoesDeleteComponent
+    FuncoesDeleteComponent,
+    AetListComponent
   ],
   imports: [
     BrowserModule,

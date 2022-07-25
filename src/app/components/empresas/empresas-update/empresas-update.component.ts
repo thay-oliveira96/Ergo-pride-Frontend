@@ -28,7 +28,7 @@ export class EmpresasUpdateComponent implements OnInit {
     celular:              '',
     email:                '',
     funcionarios:         '',
-    departamentos:        [ ],
+    departamentos:        '',
     atividadePrincipal:   '',
     observacoes:          ''
   }

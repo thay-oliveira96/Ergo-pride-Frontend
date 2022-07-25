@@ -30,10 +30,10 @@ export class EmpresaService {
     empresas.departamentos.map((i) => {
       arr.push({id: Number(i)}) 
     })
-
     empresas.departamentos = arr;
     return empresas;
   }
+
 
   update(empresas: Empresas): Observable<Empresas> {
     return this.http.put<Empresas>(`${API_CONFIG.baseUrl}/empresas/${empresas.id}`, empresas);

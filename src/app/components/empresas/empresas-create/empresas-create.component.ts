@@ -83,17 +83,6 @@ export class EmpresasCreateComponent implements OnInit {
     })
   }
 
-  //metodo para recuperar Arrays 
-  //buildDepartmentos() {
-    //  const values = this.departamento.map(v => new FormControl(false));
-      //return this.empresas.array(values);
-  //}
-
-  //teste
-  /*addDepartamentos(){
-    return this.departamento.push();
-  }*/
-
   validaCampos(): boolean {
     return this.nome.valid && this.cnpj.valid && this.email.valid 
   }
