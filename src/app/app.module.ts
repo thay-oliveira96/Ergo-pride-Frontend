@@ -61,6 +61,10 @@ import { FuncoesCreateComponent } from './components/funcoes/funcoes-create/func
 import { FuncoesUpdateComponent } from './components/funcoes/funcoes-update/funcoes-update.component';
 import { FuncoesDeleteComponent } from './components/funcoes/funcoes-delete/funcoes-delete.component';
 import { AetListComponent } from './components/aet/aet-list/aet-list.component';
+import { ObjetoListComponent } from './components/objeto/objeto-list/objeto-list.component';
+import { ObjetoCreateComponent } from './components/objeto/objeto-create/objeto-create.component';
+import { ObjetoUpdateComponent } from './components/objeto/objeto-update/objeto-update.component';
+import { ObjetoDeleteComponent } from './components/objeto/objeto-delete/objeto-delete.component';
 
 
 
@@ -96,7 +100,11 @@ import { AetListComponent } from './components/aet/aet-list/aet-list.component';
     FuncoesCreateComponent,
     FuncoesUpdateComponent,
     FuncoesDeleteComponent,
-    AetListComponent
+    AetListComponent,
+    ObjetoListComponent,
+    ObjetoCreateComponent,
+    ObjetoUpdateComponent,
+    ObjetoDeleteComponent
   ],
   imports: [
     BrowserModule,
