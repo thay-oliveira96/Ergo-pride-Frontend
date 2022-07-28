@@ -3,7 +3,7 @@ import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { FormControl, Validators } from '@angular/forms';
 import { Funcoes } from 'src/app/models/funcoes';
-import { FuncoeService } from 'src/app/services/funcoes';
+import { FuncoeService } from 'src/app/services/funcoes.service';
 
 @Component({
   selector: 'app-funcoes-create',

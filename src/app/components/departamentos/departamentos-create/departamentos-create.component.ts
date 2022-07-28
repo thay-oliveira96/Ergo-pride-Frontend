@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Departamentos } from 'src/app/models/departamentos';
-import { DepartamentoService } from 'src/app/services/departamentos';
+import { DepartamentoService } from 'src/app/services/departamentos.service';
 import { ToastrService } from 'ngx-toastr';;
 import { Router } from '@angular/router';
 import { FormControl, Validators } from '@angular/forms';

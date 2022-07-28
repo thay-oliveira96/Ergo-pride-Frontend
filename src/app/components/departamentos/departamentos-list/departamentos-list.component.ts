@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Departamentos } from 'src/app/models/departamentos';
-import { DepartamentoService } from 'src/app/services/departamentos';
+import { DepartamentoService } from 'src/app/services/departamentos.service';
 
 @Component({
   selector: 'app-departamentos-list',

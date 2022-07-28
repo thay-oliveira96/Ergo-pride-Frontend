@@ -3,9 +3,9 @@ import { Empresas } from 'src/app/models/empresas';
 import { FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { EmpresaService } from 'src/app/services/empresas';
+import { EmpresaService } from 'src/app/services/empresas.service';
 import { Departamentos } from 'src/app/models/departamentos';
-import { DepartamentoService } from 'src/app/services/departamentos';
+import { DepartamentoService } from 'src/app/services/departamentos.service';
 
 
 @Component({

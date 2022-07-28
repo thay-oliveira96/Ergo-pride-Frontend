@@ -3,7 +3,7 @@ import { FormControl, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Departamentos } from 'src/app/models/departamentos';
-import { DepartamentoService } from 'src/app/services/departamentos';
+import { DepartamentoService } from 'src/app/services/departamentos.service';
 
 
 @Component({

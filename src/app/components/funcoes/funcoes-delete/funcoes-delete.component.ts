@@ -4,7 +4,7 @@ import { FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Funcoes } from 'src/app/models/funcoes';
-import { FuncoeService } from 'src/app/services/funcoes';
+import { FuncoeService } from 'src/app/services/funcoes.service';
 
 
 @Component({

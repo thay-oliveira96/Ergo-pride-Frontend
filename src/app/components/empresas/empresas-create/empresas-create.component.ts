@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { Empresas } from 'src/app/models/empresas';
-import { EmpresaService } from 'src/app/services/empresas';
+import { EmpresaService } from 'src/app/services/empresas.service';
 import { Router } from '@angular/router';
 import { FormArray, FormControl, Validators } from '@angular/forms';
 import { Departamentos } from 'src/app/models/departamentos';
-import { DepartamentoService } from 'src/app/services/departamentos';
+import { DepartamentoService } from 'src/app/services/departamentos.service';
 
 @Component({
   selector: 'app-empresas-create',

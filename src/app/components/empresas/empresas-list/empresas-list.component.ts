@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Empresas } from 'src/app/models/empresas';
-import { EmpresaService } from 'src/app/services/empresas';
+import { EmpresaService } from 'src/app/services/empresas.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 

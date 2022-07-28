@@ -3,7 +3,7 @@ import { FormControl, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Funcoes } from 'src/app/models/funcoes';
-import { FuncoeService } from 'src/app/services/funcoes';
+import { FuncoeService } from 'src/app/services/funcoes.service';
 
 @Component({
   selector: 'app-funcoes-update',

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Empresas } from 'src/app/models/empresas';
-import { EmpresaService } from 'src/app/services/empresas';
+import { EmpresaService } from 'src/app/services/empresas.service';
 
 @Component({
   selector: 'app-empresas-read',

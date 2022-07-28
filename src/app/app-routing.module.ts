@@ -29,6 +29,10 @@ import { FuncoesCreateComponent } from './components/funcoes/funcoes-create/func
 import { FuncoesListComponent } from './components/funcoes/funcoes-list/funcoes-list.component';
 import { FuncoesUpdateComponent } from './components/funcoes/funcoes-update/funcoes-update.component';
 import { FuncoesDeleteComponent } from './components/funcoes/funcoes-delete/funcoes-delete.component';
+import { ObjetoListComponent } from './components/objeto/objeto-list/objeto-list.component';
+import { ObjetoCreateComponent } from './components/objeto/objeto-create/objeto-create.component';
+import { ObjetoUpdateComponent } from './components/objeto/objeto-update/objeto-update.component';
+import { ObjetoDeleteComponent } from './components/objeto/objeto-delete/objeto-delete.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -66,6 +70,11 @@ const routes: Routes = [
       {path: 'funcoes/create', component: FuncoesCreateComponent},
       {path: 'funcoes/update/:id', component: FuncoesUpdateComponent},
       {path: 'funcoes/delete/:id', component: FuncoesDeleteComponent},
+
+      {path: 'objeto', component: ObjetoListComponent},
+      {path: 'objeto/create', component: ObjetoCreateComponent},
+      {path: 'objeto/update/:id', component: ObjetoUpdateComponent},
+      {path: 'objeto/delete/:id', component: ObjetoDeleteComponent},
     ]
   }
 ];
