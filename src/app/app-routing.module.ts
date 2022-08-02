@@ -33,6 +33,10 @@ import { ObjetoListComponent } from './components/objeto/objeto-list/objeto-list
 import { ObjetoCreateComponent } from './components/objeto/objeto-create/objeto-create.component';
 import { ObjetoUpdateComponent } from './components/objeto/objeto-update/objeto-update.component';
 import { ObjetoDeleteComponent } from './components/objeto/objeto-delete/objeto-delete.component';
+import { SegmentoListComponent } from './components/segmento/segmento-list/segmento-list.component';
+import { SegmentoCreateComponent } from './components/segmento/segmento-create/segmento-create.component';
+import { SegmentoUpdateComponent } from './components/segmento/segmento-update/segmento-update.component';
+import { SegmentoDeleteComponent } from './components/segmento/segmento-delete/segmento-delete.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -75,6 +79,11 @@ const routes: Routes = [
       {path: 'objeto/create', component: ObjetoCreateComponent},
       {path: 'objeto/update/:id', component: ObjetoUpdateComponent},
       {path: 'objeto/delete/:id', component: ObjetoDeleteComponent},
+
+      {path: 'segmento', component: SegmentoListComponent},
+      {path: 'segmento/create', component: SegmentoCreateComponent},
+      {path: 'segmento/update/:id', component: SegmentoUpdateComponent},
+      {path: 'segmento/delete/:id', component: SegmentoDeleteComponent},
     ]
   }
 ];
