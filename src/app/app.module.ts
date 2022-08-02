@@ -65,6 +65,7 @@ import { ObjetoListComponent } from './components/objeto/objeto-list/objeto-list
 import { ObjetoCreateComponent } from './components/objeto/objeto-create/objeto-create.component';
 import { ObjetoUpdateComponent } from './components/objeto/objeto-update/objeto-update.component';
 import { ObjetoDeleteComponent } from './components/objeto/objeto-delete/objeto-delete.component';
+import { AetCreateComponent } from './components/aet/aet-create/aet-create.component';
 
 
 
@@ -104,7 +105,8 @@ import { ObjetoDeleteComponent } from './components/objeto/objeto-delete/objeto-
     ObjetoListComponent,
     ObjetoCreateComponent,
     ObjetoUpdateComponent,
-    ObjetoDeleteComponent
+    ObjetoDeleteComponent,
+    AetCreateComponent
   ],
   imports: [
     BrowserModule,
