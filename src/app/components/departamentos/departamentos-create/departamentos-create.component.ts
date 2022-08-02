@@ -30,7 +30,7 @@ export class DepartamentosCreateComponent implements OnInit {
   
   create(): void {
     this.service.create(this.departamentos).subscribe(() => {
-      this.toast.success('Existe um departamento com o mesmo nome', 'cadastro');
+      this.toast.success('Departamento cadastrado com sucesso', 'cadastro');
       this.router.navigate(['departamentos'])
     }, ex => {
       console.log(ex);
