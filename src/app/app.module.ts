@@ -66,6 +66,10 @@ import { ObjetoCreateComponent } from './components/objeto/objeto-create/objeto-
 import { ObjetoUpdateComponent } from './components/objeto/objeto-update/objeto-update.component';
 import { ObjetoDeleteComponent } from './components/objeto/objeto-delete/objeto-delete.component';
 import { AetCreateComponent } from './components/aet/aet-create/aet-create.component';
+import { SegmentoListComponent } from './components/segmento/segmento-list/segmento-list.component';
+import { SegmentoCreateComponent } from './components/segmento/segmento-create/segmento-create.component';
+import { SegmentoUpdateComponent } from './components/segmento/segmento-update/segmento-update.component';
+import { SegmentoDeleteComponent } from './components/segmento/segmento-delete/segmento-delete.component';
 
 
 
@@ -106,7 +110,11 @@ import { AetCreateComponent } from './components/aet/aet-create/aet-create.compo
     ObjetoCreateComponent,
     ObjetoUpdateComponent,
     ObjetoDeleteComponent,
-    AetCreateComponent
+    AetCreateComponent,
+    SegmentoListComponent,
+    SegmentoCreateComponent,
+    SegmentoUpdateComponent,
+    SegmentoDeleteComponent
   ],
   imports: [
     BrowserModule,
