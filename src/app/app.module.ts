@@ -70,6 +70,10 @@ import { SegmentoListComponent } from './components/segmento/segmento-list/segme
 import { SegmentoCreateComponent } from './components/segmento/segmento-create/segmento-create.component';
 import { SegmentoUpdateComponent } from './components/segmento/segmento-update/segmento-update.component';
 import { SegmentoDeleteComponent } from './components/segmento/segmento-delete/segmento-delete.component';
+import { AetCargoListComponent } from './components/aetCargo/aet-cargo-list/aet-cargo-list.component';
+import { AetCargoCreateComponent } from './components/aetCargo/aet-cargo-create/aet-cargo-create.component';
+import { AetCargoUpdateComponent } from './components/aetCargo/aet-cargo-update/aet-cargo-update.component';
+import { AetCargoDeleteComponent } from './components/aetCargo/aet-cargo-delete/aet-cargo-delete.component';
 
 
 
@@ -114,7 +118,11 @@ import { SegmentoDeleteComponent } from './components/segmento/segmento-delete/s
     SegmentoListComponent,
     SegmentoCreateComponent,
     SegmentoUpdateComponent,
-    SegmentoDeleteComponent
+    SegmentoDeleteComponent,
+    AetCargoListComponent,
+    AetCargoCreateComponent,
+    AetCargoUpdateComponent,
+    AetCargoDeleteComponent
   ],
   imports: [
     BrowserModule,
