@@ -26,7 +26,7 @@ export class EmpresasReadComponent implements OnInit {
     celular:              '',
     email:                '',
     funcionarios:         '',
-    departamentos:        [ ],
+    departamentos:        '',
     atividadePrincipal:   '',
     observacoes:          ''
   }
@@ -40,6 +40,7 @@ export class EmpresasReadComponent implements OnInit {
   ngOnInit(): void {
     this.empresas.id = this.route.snapshot.paramMap.get('id');
     this.findById();
+    this.empresaService.getDepartamentosId(this.empresas);
   }
 
   findById(): void {
@@ -49,5 +50,4 @@ export class EmpresasReadComponent implements OnInit {
       this.toastService.error(ex.error.error);
     })
   }
-
 }

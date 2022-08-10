@@ -34,7 +34,6 @@ export class EmpresaService {
     return empresas;
   }
 
-
   update(empresas: Empresas): Observable<Empresas> {
     return this.http.put<Empresas>(`${API_CONFIG.baseUrl}/empresas/${empresas.id}`, empresas);
   }
