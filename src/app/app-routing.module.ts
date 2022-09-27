@@ -40,6 +40,7 @@ import { SegmentoDeleteComponent } from './components/segmento/segmento-delete/s
 import { AetCargoListComponent } from './components/aetCargo/aet-cargo-list/aet-cargo-list.component';
 import { AetListComponent } from './components/aet/aet-list/aet-list.component';
 import { AetCreateComponent } from './components/aet/aet-create/aet-create.component';
+import { AetCargoCreateComponent } from './components/aetCargo/aet-cargo-create/aet-cargo-create.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -90,6 +91,10 @@ const routes: Routes = [
 
       {path: 'aet', component: AetListComponent},
       {path: 'aet/create', component: AetCreateComponent},
+
+
+      {path: 'aet-cargo', component: AetCargoListComponent},
+      {path: 'aet-cargo/create', component: AetCargoCreateComponent},
       
     ]
   }
