@@ -9,5 +9,4 @@ export interface AetEmpresas {
     diagnosticoGlobal?: String;
     recomendacoes?: String;
 
-
 }

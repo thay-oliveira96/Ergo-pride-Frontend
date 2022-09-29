@@ -90,7 +90,7 @@ const routes: Routes = [
       {path: 'segmento/delete/:id', component: SegmentoDeleteComponent},
 
       {path: 'aet', component: AetListComponent},
-      {path: 'aet/create', component: AetCreateComponent},
+      {path: 'aet/create', component: AetCargoCreateComponent},
 
 
       {path: 'aet-cargo', component: AetCargoListComponent},
