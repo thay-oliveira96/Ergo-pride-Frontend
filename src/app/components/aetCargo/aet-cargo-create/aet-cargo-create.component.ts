@@ -18,7 +18,7 @@ export class AetCargoCreateComponent implements OnInit {
     cargo:                '',
     fatoresRisco:         '',
     grauRisco:            '',
-    SegCorpoPrinc:        '',
+    segCorpoPrinc:        '',
     demSegm:              '',
     diagnosticoGlobal:    '',
     recomendacoes:        ''
@@ -60,4 +60,8 @@ export class AetCargoCreateComponent implements OnInit {
     })
   }
   isLinear = false;
+
+  validaCampos(): boolean {
+    return this.cod.valid && this.cargo.valid && this.fatoresRisco.valid && this.SegCorpoPrinc.valid
+  }
 }
