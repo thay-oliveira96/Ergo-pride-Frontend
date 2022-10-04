@@ -1,4 +1,4 @@
-export interface AetEmpresas {
+export interface AetCargos {
     id?: any;
     cod?: String;
     cargo?: String;

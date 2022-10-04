@@ -1,43 +1,90 @@
 <div class="container mat-elevation-z8">
   <form class="form">
     <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-      {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+      {{!isLinear ? 'Travar demais edições' : 'Destravar Demais edições'}}
     </button>
     <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
-      <mat-step [stepControl]="firstFormGroup">
-        <form [formGroup]="firstFormGroup">
-          <ng-template matStepLabel>Fill out your name</ng-template>
-          <mat-form-field appearance="fill">
-            <mat-label>Name</mat-label>
-            <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+      <mat-step [stepControl]="cod">
+        <!--<form [formGroup]="cod"> -->
+          <ng-template matStepLabel>Cod</ng-template>
+          <mat-form-field class="fullwidth" appearance="legacy">
+            <mat-label>Cod</mat-label>
+            <input
+            [(ngModel)]="aetCargos.cod"
+            name="cod"
+            [formControl]="cod"
+            required
+            matInput 
+            placeholder="Ex.. nome do colaborador"
+            maxlength="60">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
           </mat-form-field>
           <div>
             <button mat-button matStepperNext>Next</button>
           </div>
-        </form>
+       <!-- </form> -->
       </mat-step>
-      <mat-step [stepControl]="secondFormGroup">
-        <form [formGroup]="secondFormGroup">
-          <ng-template matStepLabel>Fill out your address</ng-template>
-          <mat-form-field appearance="fill">
-            <mat-label>Address</mat-label>
-            <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-                   required>
+      <mat-step [stepControl]="cargo">
+        <!--<form [formGroup]="cargo"> -->
+          <ng-template matStepLabel>Cargo</ng-template>
+          <mat-form-field class="fullwidth" appearance="legacy">
+            <mat-label>Cargo</mat-label>
+            <input
+            [(ngModel)]="aetCargos.cargo"
+            name="cargo"
+            [formControl]="cargo"
+            required
+            matInput 
+            placeholder="Ex.. nome do colaborador"
+            maxlength="60">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
           </mat-form-field>
           <div>
             <button mat-button matStepperPrevious>Back</button>
             <button mat-button matStepperNext>Next</button>
           </div>
-        </form>
+       <!-- </form> -->
       </mat-step>
       <mat-step>
-        <ng-template matStepLabel>Done</ng-template>
+        <ng-template matStepLabel>Grau de Risco</ng-template>
         <p>You are now done.</p>
         <div>
           <button mat-button matStepperPrevious>Back</button>
-          <button mat-button (click)="stepper.reset()">Reset</button>
+          <button mat-button matStepperNext>Next</button>
         </div>
       </mat-step>
+      <mat-step>
+      <ng-template matStepLabel>Segmento Corporal</ng-template>
+          <p>Aqui será o segmento corporal do relatorio</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Demais Segmentos</ng-template>
+            <p>Aqui será os demais segmentos</p>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Diagnostico global</ng-template>
+              <p>DIagnostico global</p>
+              <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+              </div>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>Recomendações</ng-template>
+                <p>You are now done.</p>
+                <div>
+                  <button mat-button matStepperPrevious>Back</button>
+                  <button mat-button (click)="stepper.reset()">Reset</button>
+                </div>
+            </mat-step>
     </mat-stepper>
   </form>
     <p class="fullwidth">By Thaynan</p>
