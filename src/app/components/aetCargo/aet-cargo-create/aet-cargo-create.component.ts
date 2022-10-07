@@ -21,8 +21,10 @@ export class AetCargoCreateComponent implements OnInit {
     segCorpoPrinc:        '',
     demSegm:              '',
     diagnosticoGlobal:    '',
-    recomendacoes:        ''
+    recomendacoes:        '',
   }
+
+
 
   //formularios
   cod: FormControl = new FormControl(null, Validators.minLength(3));
