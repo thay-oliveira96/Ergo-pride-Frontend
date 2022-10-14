@@ -3,7 +3,9 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AetCargos } from 'src/app/models/aetCargo';
+import { Funcoes } from 'src/app/models/funcoes';
 import { AetCargoService } from 'src/app/services/aetCargo.service';
+import { FuncoeService } from 'src/app/services/funcoes.service';
 
 @Component({
   selector: 'app-aet-cargo-create',
@@ -24,7 +26,7 @@ export class AetCargoCreateComponent implements OnInit {
     recomendacoes:        '',
   }
 
-
+  funcoes: Funcoes[]= [];
 
   //formularios
   cod: FormControl = new FormControl(null, Validators.minLength(3));
@@ -38,11 +40,12 @@ export class AetCargoCreateComponent implements OnInit {
 
   constructor(
     private service: AetCargoService,
+    private funcoeService: FuncoeService,
     private toast: ToastrService,
     private router: Router) { }
 
   ngOnInit(): void {
-
+    this.findAllFuncoes();
   }
 
   
@@ -62,6 +65,12 @@ export class AetCargoCreateComponent implements OnInit {
     })
   }
   isLinear = false;
+
+  findAllFuncoes(): void { 
+    this.funcoeService.findAll().subscribe(resposta => {
+     this.funcoes = resposta;
+    })
+  }
 
   validaCampos(): boolean {
     return this.cod.valid && this.cargo.valid && this.fatoresRisco.valid && this.SegCorpoPrinc.valid

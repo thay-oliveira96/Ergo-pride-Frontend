@@ -26,15 +26,16 @@
           <ng-template matStepLabel>Cargo</ng-template>
           <mat-form-field class="fullwidth" appearance="legacy">
             <mat-label>Cargo</mat-label>
-            <input
+            <mat-select
             [(ngModel)]="aetCargos.cargo"
             name="cargo"
             [formControl]="cargo"
             required
             matInput 
-            placeholder="Ex.. nome do colaborador"
-            maxlength="60">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            placeholder="Ex.. nome do colaborador">
+            <mat-option *ngFor="let func of funcoes" value="{{ func.id }}">{{ func.nome }}</mat-option>
+          </mat-select>
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
           </mat-form-field>
           <div>
             <button mat-button matStepperPrevious>Back</button>
