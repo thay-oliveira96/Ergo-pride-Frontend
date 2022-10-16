@@ -1,5 +1,3 @@
-import { Departamentos } from "./departamentos";
-
 export interface Empresas {
     id?:                    any;
     nome:                   String;

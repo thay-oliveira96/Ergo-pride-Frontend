@@ -65,14 +65,14 @@
       <ng-template matStepLabel>Segmento Corporal Principal</ng-template>
       <mat-form-field class="fullwidth" appearance="legacy">
         <mat-label>Segmento Corporal Principal</mat-label>
-        <input
+        <mat-select
         [(ngModel)]="aetCargos.segCorpoPrinc"
         name="grauRisco"
         [formControl]="grauRisco"
         required
-        matInput 
-        placeholder="Ex.. nome do Grau de Risco"
-        maxlength="60">
+        matInput >
+        <mat-option *ngFor="let seg of SegmCorpo" value="{{ seg.id }}">{{ seg.descricao }}</mat-option>
+      </mat-select>
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
       </mat-form-field>
           <div>
@@ -80,7 +80,7 @@
             <button mat-button matStepperNext>Next</button>
           </div>
       </mat-step>
-      <mat-step>
+      <!--<mat-step>
         <ng-template matStepLabel>Demais Segmentos</ng-template>
         <mat-form-field class="fullwidth" appearance="legacy">
           <mat-label>Demais Segmentos</mat-label>
@@ -98,7 +98,7 @@
               <button mat-button matStepperPrevious>Back</button>
               <button mat-button matStepperNext>Next</button>
             </div>
-        </mat-step>
+        </mat-step> -->
         <mat-step>
           <ng-template matStepLabel>Diagnostico global</ng-template>
           <mat-form-field class="fullwidth" appearance="legacy">

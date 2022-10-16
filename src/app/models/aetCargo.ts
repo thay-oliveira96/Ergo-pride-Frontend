@@ -5,7 +5,7 @@ export interface AetCargos {
     fatoresRisco?:          String;
     grauRisco?:             String;
     segCorpoPrinc?:            any;
-    demSegm?:                  any;
+    //demSegm?:                  any;
     diagnosticoGlobal?:     String;
     recomendacoes?:         String;
     nomeCargo?:             String;

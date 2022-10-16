@@ -4,8 +4,10 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AetCargos } from 'src/app/models/aetCargo';
 import { Funcoes } from 'src/app/models/funcoes';
+import { Segmento } from 'src/app/models/segmento';
 import { AetCargoService } from 'src/app/services/aetCargo.service';
 import { FuncoeService } from 'src/app/services/funcoes.service';
+import { SegmentoService } from 'src/app/services/segmento.service';
 
 @Component({
   selector: 'app-aet-cargo-create',
@@ -21,12 +23,13 @@ export class AetCargoCreateComponent implements OnInit {
     fatoresRisco:         '',
     grauRisco:            '',
     segCorpoPrinc:        '',
-    demSegm:              '',
+   // demSegm:              '',
     diagnosticoGlobal:    '',
     recomendacoes:        '',
   }
 
-  funcoes: Funcoes[]= [];
+  funcoes: Funcoes[] = [];
+  SegmCorpo: Segmento[] = [];
 
   //formularios
   cod: FormControl = new FormControl(null, Validators.minLength(3));
@@ -34,18 +37,20 @@ export class AetCargoCreateComponent implements OnInit {
   fatoresRisco: FormControl = new FormControl(null, Validators.email);
   grauRisco: FormControl = new FormControl(null, Validators.minLength(3));
   SegCorpoPrinc: FormControl = new FormControl(null, Validators.minLength(3));
-  demSegm: FormControl = new FormControl(null, Validators.minLength(3));
+ // demSegm: FormControl = new FormControl(null, Validators.minLength(3));
   diagnosticoGlobal: FormControl = new FormControl(null, Validators.minLength(3));
   recomendacoes: FormControl = new FormControl(null, Validators.minLength(3));
 
   constructor(
     private service: AetCargoService,
     private funcoeService: FuncoeService,
+    private segCorpoService: SegmentoService,
     private toast: ToastrService,
     private router: Router) { }
 
   ngOnInit(): void {
     this.findAllFuncoes();
+    this.findAllSegCorpo();
   }
 
   
@@ -69,6 +74,12 @@ export class AetCargoCreateComponent implements OnInit {
   findAllFuncoes(): void { 
     this.funcoeService.findAll().subscribe(resposta => {
      this.funcoes = resposta;
+    })
+  }
+
+  findAllSegCorpo(): void { 
+    this.segCorpoService.findAll().subscribe(resposta => {
+     this.SegmCorpo = resposta;
     })
   }
 

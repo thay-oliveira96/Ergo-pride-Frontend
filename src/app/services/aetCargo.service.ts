@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { API_CONFIG } from '../config/api.config';
 import { AetCargos } from '../models/aetCargo';
+import { Segmento } from '../models/segmento';
 
 
 @Injectable({
@@ -21,8 +22,28 @@ export class AetCargoService {
   }
 
   create(aetCargos: AetCargos): Observable<AetCargos> {
+    this.getCargoId(aetCargos);
+    this.getSegmentoId(aetCargos);
     return this.http.post<AetCargos>(`${API_CONFIG.baseUrl}/aetCargos`, aetCargos);
 
+  }
+
+  getSegmentoId(aetCargos: AetCargos): any{
+    var arr = [];
+    aetCargos.segCorpoPrinc.map((i) => {
+      arr.push({id: Number(i)})
+    })
+    aetCargos.segCorpoPrinc = arr;
+    return aetCargos;
+  }
+
+  getCargoId(aetCargos: AetCargos): any{
+    var arr = [];
+    aetCargos.cargo.map((i) => {
+      arr.push({id: Number(i)}) 
+    })
+    aetCargos.cargo = arr;
+    return aetCargos;
   }
 
   update(aetCargos: AetCargos): Observable<AetCargos> {
