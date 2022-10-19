@@ -41,6 +41,7 @@ import { AetCargoListComponent } from './components/aetCargo/aet-cargo-list/aet-
 import { AetListComponent } from './components/aet/aet-list/aet-list.component';
 import { AetCreateComponent } from './components/aet/aet-create/aet-create.component';
 import { AetCargoCreateComponent } from './components/aetCargo/aet-cargo-create/aet-cargo-create.component';
+import { AetPostosCreateComponent } from './components/aetPostos/aet-postos-create/aet-postos-create.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -90,11 +91,11 @@ const routes: Routes = [
       {path: 'segmento/delete/:id', component: SegmentoDeleteComponent},
 
       {path: 'aet', component: AetListComponent},
-      {path: 'aet/create', component: AetCargoCreateComponent},
+      {path: 'aet/create', component: AetPostosCreateComponent},
 
 
       {path: 'aet-cargo', component: AetCargoListComponent},
-      {path: 'aet-cargo/create', component: AetCargoCreateComponent},
+      {path: 'aet-cargo/create', component: AetPostosCreateComponent},
       
     ]
   }

@@ -75,6 +75,10 @@ import { AetCargoListComponent } from './components/aetCargo/aet-cargo-list/aet-
 import { AetCargoCreateComponent } from './components/aetCargo/aet-cargo-create/aet-cargo-create.component';
 import { AetCargoUpdateComponent } from './components/aetCargo/aet-cargo-update/aet-cargo-update.component';
 import { AetCargoDeleteComponent } from './components/aetCargo/aet-cargo-delete/aet-cargo-delete.component';
+import { AetPostosCreateComponent } from './components/aetPostos/aet-postos-create/aet-postos-create.component';
+import { AetPostosUpdateComponent } from './components/aetPostos/aet-postos-update/aet-postos-update.component';
+import { AetPostosListComponent } from './components/aetPostos/aet-postos-list/aet-postos-list.component';
+import { AetPostosDeleteComponent } from './components/aetPostos/aet-postos-delete/aet-postos-delete.component';
 
 
 
@@ -123,7 +127,11 @@ import { AetCargoDeleteComponent } from './components/aetCargo/aet-cargo-delete/
     AetCargoListComponent,
     AetCargoCreateComponent,
     AetCargoUpdateComponent,
-    AetCargoDeleteComponent
+    AetCargoDeleteComponent,
+    AetPostosCreateComponent,
+    AetPostosUpdateComponent,
+    AetPostosListComponent,
+    AetPostosDeleteComponent
   ],
   imports: [
     BrowserModule,
